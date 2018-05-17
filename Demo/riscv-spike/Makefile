@@ -149,4 +149,9 @@ force_true:
 sim: all
 	spike $(PROG).elf
 
+C_EMULATOR = $(TP_TOP)/emulator/emulator-freechips.rocketchip.system-DefaultConfig
+emulate: all
+	@echo "-------------------  Starting C++ Emulator  -------------------"
+	$(C_EMULATOR) $(PROG).elf
+
 
